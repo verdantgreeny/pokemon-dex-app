@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PokemonList from "../components/PokemonList";
 import Dashboard from "../components/Dashboard";
+import MOCK_DATA from "../mock-data";
 const Dex = () => {
   const [selectedPokemon, setSeletedPokemon] = useState([]);
 
@@ -23,13 +24,25 @@ const Dex = () => {
     return setSeletedPokemon([...newPokemonList]);
   };
 
+  const newMockList = MOCK_DATA.map((pokemon) => {
+    const selectedId = selectedPokemon.map((p) => p.id);
+    if (selectedId.includes(pokemon.id)) {
+      return {
+        ...pokemon,
+        isSelected: true,
+      };
+    } else {
+      return pokemon;
+    }
+  });
+
   return (
     <div>
       <Dashboard
         selectedPokemon={selectedPokemon}
         onDeleteHandler={onDeleteHandler}
       />
-      <PokemonList onAddHandler={onAddHandler} />
+      <PokemonList onAddHandler={onAddHandler} newMockList={newMockList} />
     </div>
   );
 };

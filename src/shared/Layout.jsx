@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <>
       <StHeader>
-        <h1> 포켓몬 도감 </h1>
+        <h1> Pokémon Dex </h1>
         <nav>
           <Link to="/">Home</Link>
           <Link to="/dex">Dex</Link>
@@ -16,7 +16,7 @@ const Layout = () => {
         <Outlet />
       </StMain>
       <StFooter>
-        <p>&copy; 2025. Pokemon Dex App</p>
+        <p>&copy; 2025. Pokémon Dex App</p>
       </StFooter>
     </>
   );
@@ -25,11 +25,12 @@ const Layout = () => {
 export default Layout;
 
 const StHeader = styled.header`
+  font-family: "Barriecito", serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background-color: #333;
+  padding: 10px 0 10px 10px;
+  background-color: #121a35;
   color: white;
 
   h1 {
@@ -48,8 +49,8 @@ const StHeader = styled.header`
 `;
 
 const StMain = styled.main`
-  background-color: green;
   min-height: 89vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,10 +58,11 @@ const StMain = styled.main`
 `;
 
 const StFooter = styled.footer`
+  font-family: "Barriecito", serif;
   position: relative;
   text-align: center;
+  padding: 20px 0px;
   bottom: 0px;
-  padding: 10px;
-  background-color: #333;
+  background-color: #121a35;
   color: white;
 `;
