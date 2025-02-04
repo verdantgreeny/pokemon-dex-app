@@ -24,7 +24,7 @@ const StPokemonList = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  background-color: #121a35bb;
+  background-color: #121a3573;
   border-radius: 12px;
   width: 80vw;
   padding: 20px;

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const PokemonCard = ({
@@ -14,14 +15,16 @@ const PokemonCard = ({
         <span> {String(pokemon.id).padStart(3, "0")} </span>
         {pokemon.korean_name}
       </StPokemonName>
-      <CardImg src={pokemon.img_url} alt={pokemon.img_url} />
+      <Link to={`/detail?id=${pokemon.id}`}>
+        <CardImg src={pokemon.img_url} alt={pokemon.korean_name} />
+      </Link>
       {!isSelected ? (
         <StButton
           color={pokemon.isSelected && "red"}
           type="button"
           onClick={() => onAddHandler(pokemon)}
         >
-          {!pokemon.isSelected ? "추가" : "삭제"}
+          {!pokemon.isSelected ? "추가" : "추가됨"}
         </StButton>
       ) : (
         <StButton
@@ -76,6 +79,7 @@ const StPokemonName = styled.div`
 const CardImg = styled.img`
   /* background-color: beige; */
   margin: 5px auto;
+  padding: 0 40px;
   width: 80px;
   height: 80px;
 `;
@@ -90,6 +94,6 @@ const StButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: ${(p)=>(p.color === "red"? "#f8bf9087": "#b3e0f87b")} ;
+    background-color: ${(p) => (p.color === "red" ? "#f8bf9087" : "#b3e0f87b")};
   }
 `;

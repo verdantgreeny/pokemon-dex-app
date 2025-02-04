@@ -13,7 +13,7 @@ const Router = () => {
           <Route path="/" element={<Navigate replace to="/home" />}></Route>
           <Route path="/home" element={<Home />} />
           <Route path="/dex" element={<Dex />} />
-          <Route path="/detail/:id" element={<Detail />} />
+          <Route path="/detail" element={<Detail />} />
         </Route>
       </Routes>
     </BrowserRouter>
