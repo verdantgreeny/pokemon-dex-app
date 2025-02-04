@@ -2,12 +2,11 @@ import React from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../components/Button";
-import MOCK_DATA from "../mock-data";
 
-const Detail = () => {
+const Detail = ({ onAddHandler, newMockList }) => {
   const navigate = useNavigate();
-  const [query, setQuery] = useSearchParams();
-  const pokemon = MOCK_DATA.find((p) => p.id === +query.get("id"));
+  const [query] = useSearchParams();
+  const pokemon = newMockList.find((p) => p.id === +query.get("id"));
 
   return (
     <DetailSection>
@@ -16,10 +15,19 @@ const Detail = () => {
         <PokemonNumber>No.{String(pokemon.id).padStart(3, "0")}</PokemonNumber>
         <PokemonName>{pokemon.korean_name}</PokemonName>
         <PokemonDescription> {pokemon.description}</PokemonDescription>
-        <div> 타입 : {String(pokemon.types)} </div>
-        <Button type="button" onClick={() => navigate("/dex")}>
-          뒤로가기
-        </Button>
+        <PokemonTypes> 타입 : {String(pokemon.types)} </PokemonTypes>
+        <PokemonBtnDiv>
+          <Button type="button" onClick={() => navigate("/dex")}>
+            뒤로가기
+          </Button>
+          <Button
+            color={pokemon.isSelected && "red"}
+            type="button"
+            onClick={() => onAddHandler(pokemon)}
+          >
+            {!pokemon.isSelected ? "추가" : "추가됨"}
+          </Button>
+        </PokemonBtnDiv>
       </div>
     </DetailSection>
   );
@@ -49,12 +57,21 @@ const DetailImg = styled.img`
 `;
 
 const PokemonNumber = styled.div`
-font-size: 12px;
-`
+  font-size: 12px;
+`;
 const PokemonName = styled.div`
-font-size: 27px;
-`
+  font-size: 27px;
+`;
 const PokemonDescription = styled.div`
   font-weight: 100;
   margin: 20px 0;
+`;
+
+const PokemonTypes = styled.div`
+  margin-bottom: 40px;
+`;
+
+const PokemonBtnDiv = styled.div`
+display:flex;
+
 `

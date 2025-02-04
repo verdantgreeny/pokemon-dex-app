@@ -1,50 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import PokemonList from "../components/PokemonList";
 import Dashboard from "../components/Dashboard";
-import MOCK_DATA from "../mock-data";
-import { useEffect } from "react";
-const Dex = () => {
-  const [selectedPokemon, setSeletedPokemon] = useState(getSelectedPokemon);
 
-  const onAddHandler = (pokemon) => {
-    const addedPokemon = selectedPokemon.find((p) => {
-      return p.id === pokemon.id;
-    });
-
-    if (selectedPokemon.length >= 6) {
-      alert("6개 이상의 포켓몬을 담을 수 없습니다.");
-    } else if (addedPokemon) {
-      alert("이미 추가된 포켓몬 입니다.");
-    } else {
-      setSeletedPokemon([...selectedPokemon, pokemon]);
-    }
-  };
-
-  const onDeleteHandler = (id) => {
-    const newPokemonList = selectedPokemon.filter((p) => p.id !== id);
-    return setSeletedPokemon([...newPokemonList]);
-  };
-
-  const newMockList = MOCK_DATA.map((pokemon) => {
-    const selectedId = selectedPokemon.map((p) => p.id);
-    if (selectedId.includes(pokemon.id)) {
-      return {
-        ...pokemon,
-        isSelected: true,
-      };
-    } else {
-      return pokemon;
-    }
-  });
-
-  useEffect(()=>{
-    localStorage.setItem("selectedPokemon", JSON.stringify(selectedPokemon))
-  },[selectedPokemon])
-
-  function getSelectedPokemon () {
-    const selectedList = JSON.parse(localStorage.getItem("selectedPokemon"));
-    return selectedList || []
-  }
+const Dex = ({
+  selectedPokemon,
+  onAddHandler,
+  onDeleteHandler,
+  newMockList
+}) => {
 
   return (
     <div>

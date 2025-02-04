@@ -15,7 +15,7 @@ const StButton = styled.button`
   border-radius: 12px;
   width: 60px;
   padding: 2px;
-  margin-left: 90px;
+  margin: 0 auto;
   cursor: pointer;
 
   &:hover {

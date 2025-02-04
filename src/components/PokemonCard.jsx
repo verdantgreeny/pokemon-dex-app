@@ -82,6 +82,10 @@ const CardImg = styled.img`
   padding: 0 40px;
   width: 80px;
   height: 80px;
+
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 
 
