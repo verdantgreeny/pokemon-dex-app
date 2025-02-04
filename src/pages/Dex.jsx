@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import PokemonList from "../components/PokemonList";
 import Dashboard from "../components/Dashboard";
 import MOCK_DATA from "../mock-data";
+import { useEffect } from "react";
 const Dex = () => {
-  const [selectedPokemon, setSeletedPokemon] = useState([]);
+  const [selectedPokemon, setSeletedPokemon] = useState(getSelectedPokemon);
 
   const onAddHandler = (pokemon) => {
     const addedPokemon = selectedPokemon.find((p) => {
@@ -35,6 +36,15 @@ const Dex = () => {
       return pokemon;
     }
   });
+
+  useEffect(()=>{
+    localStorage.setItem("selectedPokemon", JSON.stringify(selectedPokemon))
+  },[selectedPokemon])
+
+  function getSelectedPokemon () {
+    const selectedList = JSON.parse(localStorage.getItem("selectedPokemon"));
+    return selectedList || []
+  }
 
   return (
     <div>
