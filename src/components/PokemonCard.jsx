@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Button from "./Button";
 
 const PokemonCard = ({
   pokemon,
@@ -19,22 +20,22 @@ const PokemonCard = ({
         <CardImg src={pokemon.img_url} alt={pokemon.korean_name} />
       </Link>
       {!isSelected ? (
-        <StButton
+        <Button
           color={pokemon.isSelected && "red"}
           type="button"
           onClick={() => onAddHandler(pokemon)}
         >
           {!pokemon.isSelected ? "추가" : "추가됨"}
-        </StButton>
+        </Button>
       ) : (
-        <StButton
+        <Button
           color="red"
           type="button"
           onClick={() => onDeleteHandler(pokemon.id)}
         >
           {" "}
           삭제{" "}
-        </StButton>
+        </Button>
       )}
     </StPokemonCard>
   );
@@ -77,23 +78,10 @@ const StPokemonName = styled.div`
 `;
 
 const CardImg = styled.img`
-  /* background-color: beige; */
   margin: 5px auto;
   padding: 0 40px;
   width: 80px;
   height: 80px;
 `;
 
-const StButton = styled.button`
-  background-color: ${(prop) => (prop.color === "red" ? "#F8BF90" : "#B3E0F8")};
-  border: none;
-  border-radius: 12px;
-  width: 60px;
-  padding: 2px;
-  margin-left: 90px;
-  cursor: pointer;
 
-  &:hover {
-    background-color: ${(p) => (p.color === "red" ? "#f8bf9087" : "#b3e0f87b")};
-  }
-`;

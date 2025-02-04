@@ -8,9 +8,7 @@ const Home = () => {
   return (
     <>
       <HomeDiv>
-        <HomeButton onClick={() => navigate("/dex")}>
-          Click To Start
-        </HomeButton>
+        <HomeButton onClick={() => navigate("/dex")}>Click To Start</HomeButton>
       </HomeDiv>
     </>
   );
@@ -38,7 +36,7 @@ const HomeButton = styled.button`
   background-color: #ffffff8d;
 
   &:hover {
-        background-color: #0000003e;
-        color: white;
-      }
+    background-color: #0000003e;
+    color: white;
+  }
 `;

@@ -1,9 +1,11 @@
 import React from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import styled from "styled-components";
+import Button from "../components/Button";
 import MOCK_DATA from "../mock-data";
 
 const Detail = () => {
+  const navigate = useNavigate();
   const [query, setQuery] = useSearchParams();
   const pokemon = MOCK_DATA.find((p) => p.id === +query.get("id"));
 
@@ -14,7 +16,7 @@ const Detail = () => {
         <div> No.{String(pokemon.id).padStart(3, "0")} <br/> {pokemon.korean_name}</div>
         <div> {pokemon.description}</div>
         <div> 타입 : {String(pokemon.types)} </div>
-        <Link to="/dex">뒤로가기</Link>
+        <Button type="button" onClick={() => navigate("/dex")}>뒤로가기</Button>
       </div>
     </DetailSection>
   );
