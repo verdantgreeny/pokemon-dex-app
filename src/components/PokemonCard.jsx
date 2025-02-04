@@ -15,13 +15,20 @@ const PokemonCard = ({
         {pokemon.korean_name}
       </StPokemonName>
       <CardImg src={pokemon.img_url} alt={pokemon.img_url} />
-      {!isSelected && !pokemon.isSelected ? (
-        <StButton type="button" onClick={() => onAddHandler(pokemon)}>
-          {" "}
-          추가{" "}
+      {!isSelected ? (
+        <StButton
+          color={pokemon.isSelected && "red"}
+          type="button"
+          onClick={() => onAddHandler(pokemon)}
+        >
+          {!pokemon.isSelected ? "추가" : "삭제"}
         </StButton>
       ) : (
-        <StButton type="button" onClick={() => onDeleteHandler(pokemon.id)}>
+        <StButton
+          color="red"
+          type="button"
+          onClick={() => onDeleteHandler(pokemon.id)}
+        >
           {" "}
           삭제{" "}
         </StButton>
@@ -74,14 +81,15 @@ const CardImg = styled.img`
 `;
 
 const StButton = styled.button`
-  background-color: white;
-  border: 1px solid black;
+  background-color: ${(prop) => (prop.color === "red" ? "#F8BF90" : "#B3E0F8")};
+  border: none;
   border-radius: 12px;
   width: 60px;
+  padding: 2px;
   margin-left: 90px;
   cursor: pointer;
 
   &:hover {
-    background-color: #00000016;
+    background-color: ${(p)=>(p.color === "red"? "#f8bf9087": "#b3e0f87b")} ;
   }
 `;

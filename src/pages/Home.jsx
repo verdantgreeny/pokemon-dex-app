@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Home = () => {
   const navigate = useNavigate();
-  console.log("home");
+
   return (
     <>
       <HomeDiv>
