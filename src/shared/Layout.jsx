@@ -32,15 +32,17 @@ const StHeader = styled.header`
   padding: 10px 0 10px 10px;
   background-color: #121a35;
   color: white;
+  text-shadow: -1px 0 #F8BF90, 0 1px #F8BF90, 1px 0 #F8BF90, 0 -1px #F8BF90;
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 38px;
   }
   nav {
     a {
       padding: 10px;
       color: white;
       text-decoration: none;
+      font-size: 25px;
       &:hover {
         text-decoration: underline;
       }
@@ -50,7 +52,7 @@ const StHeader = styled.header`
 
 const StMain = styled.main`
   min-height: 89vh;
-
+  background-color: #F2F2F2;
   display: flex;
   flex-direction: column;
   justify-content: center;

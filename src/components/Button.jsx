@@ -21,4 +21,5 @@ const StButton = styled.button`
   &:hover {
     background-color: ${(p) => (p.color === "red" ? "#f8bf9087" : "#b3e0f87b")};
   }
+
 `;
