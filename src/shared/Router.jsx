@@ -17,7 +17,8 @@ const Router = () => {
     });
 
     if (addedPokemon) {
-      toast("이미 추가된 포켓몬 입니다.");
+      toast("이미 추가되었던 포켓몬이므로 삭제됩니다.");
+      onDeleteHandler(pokemon.id);
     } else if (selectedPokemon.length >= 6) {
       toast("6개 이상의 포켓몬을 담을 수 없습니다.");
     } else {
@@ -74,7 +75,11 @@ const Router = () => {
           <Route
             path="/detail"
             element={
-              <Detail onAddHandler={onAddHandler} newMockList={newMockList} />
+              <Detail
+                onAddHandler={onAddHandler}
+                newMockList={newMockList}
+                onDeleteHandler={onDeleteHandler}
+              />
             }
           />
         </Route>

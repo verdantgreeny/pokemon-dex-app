@@ -10,7 +10,7 @@ const Button = ({children, color, type, onClick}) => {
 export default Button
 
 const StButton = styled.button`
-  background-color: ${(prop) => (prop.color === "red" ? "#F8BF90" : "#B3E0F8")};
+  background-color: ${(prop) => (prop.color === "red" ? "#f89090" : prop.color === "yellow" ? "#F1EF7B" : "#B3E0F8")};
   border: none;
   border-radius: 12px;
   width: 60px;
@@ -19,7 +19,7 @@ const StButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: ${(p) => (p.color === "red" ? "#f8bf9087" : "#b3e0f87b")};
+    background-color: ${(p) => (p.color === "red" ? "#f8909086" : p.color === "yellow" ? "#dad868ae" : "#b3e0f87b")};
   }
 
 `;

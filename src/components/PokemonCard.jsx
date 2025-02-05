@@ -21,7 +21,7 @@ const PokemonCard = ({
       </Link>
       {!isSelected ? (
         <Button
-          color={pokemon.isSelected && "red"}
+          color={pokemon.isSelected && "yellow"}
           type="button"
           onClick={() => onAddHandler(pokemon)}
         >
@@ -69,7 +69,7 @@ const StPokemonName = styled.div`
   font-size: 15px;
 
   span {
-    background-color: #60ed60;
+    background-color: #ADECB9;
     margin-right: 10px;
     border-radius: 8px;
     font-size: 12px;

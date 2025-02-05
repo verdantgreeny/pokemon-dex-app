@@ -33,6 +33,7 @@ const StHeader = styled.header`
   background-color: #121a35;
   color: white;
   text-shadow: -1px 0 #F8BF90, 0 1px #F8BF90, 1px 0 #F8BF90, 0 -1px #F8BF90;
+  border-bottom: 8px solid #FED100;
 
   h1 {
     font-size: 38px;
@@ -67,4 +68,6 @@ const StFooter = styled.footer`
   bottom: 0px;
   background-color: #121a35;
   color: white;
+  border-top: 8px solid #FED100;
+  
 `;

@@ -38,7 +38,8 @@ const Detail = ({ onAddHandler, newMockList }) => {
         </Link>
         <Link to={nextDetail}>
           {" "}
-          No.{String(nextPokemon.id).padStart(3, "0")} {nextPokemon.korean_name}▶︎{" "}
+          No.{String(nextPokemon.id).padStart(3, "0")} {nextPokemon.korean_name}
+          ▶︎{" "}
         </Link>
       </DetailLinkDiv>
 
@@ -56,7 +57,7 @@ const Detail = ({ onAddHandler, newMockList }) => {
               돌아가기
             </Button>
             <Button
-              color={pokemon.isSelected && "red"}
+              color={pokemon.isSelected && "yellow"}
               type="button"
               onClick={() => onAddHandler(pokemon)}
             >
@@ -91,12 +92,11 @@ const DetailSection = styled.section`
 
 const DetailImg = styled.img`
   width: 224px;
-  height: 224px
+  height: 224px;
 `;
 
 const PokemonNumber = styled.div`
   font-size: 12px;
-
 `;
 const PokemonName = styled.div`
   font-size: 27px;
@@ -127,10 +127,10 @@ const DetailLinkDiv = styled.div`
     font-size: 20px;
     font-weight: 100;
     background-color: #121a35;
-    border: 10px solid #FED100;
+    border: 5px solid #fed100;
     border-radius: 30px;
     padding: 3vh 3vw;
-    white-space : nowrap;
+    white-space: nowrap;
     text-decoration: none;
     color: white;
     margin-bottom: 20px;
