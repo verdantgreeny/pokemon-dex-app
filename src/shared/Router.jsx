@@ -5,7 +5,7 @@ import Dex from "../pages/Dex";
 import Detail from "../pages/Detail";
 import Layout from "./Layout";
 import MOCK_DATA from "../mock-data";
-import { toast} from "react-toastify";
+import { toast } from "react-toastify";
 
 const Router = () => {
   const [selectedPokemon, setSeletedPokemon] = useState(getSelectedPokemon);
@@ -57,9 +57,9 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Navigate replace to="/home" />}></Route>
+        <Route path="/home" element={<Home />} />
         <Route element={<Layout />}>
-          <Route path="/" element={<Navigate replace to="/home" />}></Route>
-          <Route path="/home" element={<Home />} />
           <Route
             path="/dex"
             element={
@@ -79,7 +79,6 @@ const Router = () => {
           />
         </Route>
       </Routes>
-
     </BrowserRouter>
   );
 };

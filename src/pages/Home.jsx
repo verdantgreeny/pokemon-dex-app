@@ -21,15 +21,15 @@ const HomeDiv = styled.div`
   background-position: center;
   background-size: cover;
   width: 99vw;
-  height: 89vh;
+  height: 100vh;
 `;
 
 const HomeButton = styled.button`
   font-family: "Barriecito", serif;
   position: relative;
   width: 99vw;
-  height: 7vh;
-  top: 77vh;
+  height: 10vh;
+  top: 83vh;
   border: none;
   cursor: pointer;
   font-size: 30px;
