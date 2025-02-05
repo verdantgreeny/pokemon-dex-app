@@ -1,13 +1,19 @@
 import React from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import Button from "../components/Button";
-import { DetailLinkSection, DetailSection, SelectedPokemonSection } from "../styles/styledPages";
+import {
+  DetailLinkSection,
+  DetailSection,
+  SelectedPokemonSection,
+} from "../styles/styledPages";
 
 const Detail = ({ onAddHandler, newMockList }) => {
   const navigate = useNavigate();
   const [query] = useSearchParams();
   const detailPokemonId = +query.get("id");
   const pokemon = newMockList.find((p) => p.id === detailPokemonId);
+
+  // ✅ 이전번호 및 다음번호 포켓몬 디테일페이지 이동
   const prePokemon = newMockList.find((p) =>
     pokemon.id === 1
       ? p.id === newMockList.length
@@ -61,12 +67,13 @@ const Detail = ({ onAddHandler, newMockList }) => {
               type="button"
               onClick={() => onAddHandler(pokemon)}
             >
-              {!pokemon.isSelected ? "추가" : "추가됨"}
+              {!pokemon.isSelected ? "추가" : "보유"}
             </Button>
           </div>
         </div>
       </DetailSection>
 
+      {/* 선택된 포켓몬 미리보기 */}
       <SelectedPokemonSection>
         {newMockList.map((pokemon) => {
           if (pokemon.isSelected) {
@@ -84,4 +91,3 @@ const Detail = ({ onAddHandler, newMockList }) => {
 };
 
 export default Detail;
-

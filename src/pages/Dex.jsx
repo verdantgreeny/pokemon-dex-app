@@ -6,9 +6,8 @@ const Dex = ({
   selectedPokemon,
   onAddHandler,
   onDeleteHandler,
-  newMockList
+  newMockList,
 }) => {
-
   return (
     <div>
       <Dashboard

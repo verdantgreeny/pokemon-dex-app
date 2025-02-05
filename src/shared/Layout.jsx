@@ -1,14 +1,15 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import {
-  StHeader,StMain, StFooter
-} from "../styles/styledLayout";
+import { StHeader, StMain, StFooter } from "../styles/styledLayout";
 
 const Layout = () => {
   return (
     <>
       <StHeader>
-        <h1> Pokémon Dex </h1>
+        <h1>
+          {" "}
+          <img src="/src/assets/pokeball.png" alt="포켓볼" /> Pokémon Dex{" "}
+        </h1>
         <nav>
           <Link to="/">Home</Link>
           <Link to="/dex">Dex</Link>
@@ -25,4 +26,3 @@ const Layout = () => {
 };
 
 export default Layout;
-

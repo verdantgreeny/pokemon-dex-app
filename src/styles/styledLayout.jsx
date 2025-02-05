@@ -4,24 +4,32 @@ export const StHeader = styled.header`
   font-family: "Barriecito", serif;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px 0 10px 10px;
-  background-color: #121a35;
-  color: white;
-  text-shadow: -1px 0 #f8bf90, 0 1px #f8bf90, 1px 0 #f8bf90, 0 -1px #f8bf90;
-  border-bottom: 8px solid #fed100;
-
+  align-items: baseline;
+  padding: 20px 60px 20px 30px;
+  background-color: #3a4040;
+  color: #f4f8f9;
   h1 {
-    font-size: 38px;
+    font-size: 5vw;
+
+    img {
+      width: 5vw;
+      opacity: 0.8;
+    }
   }
   nav {
     a {
-      padding: 10px;
-      color: white;
+      padding: 5px 10px;
+      margin: 0 5px;
+      color: #f4f8f9;
       text-decoration: none;
       font-size: 25px;
+      border: 2px solid #3a4040;
+      border-radius: 5px;
+      text-shadow: none;
+
       &:hover {
-        text-decoration: underline;
+        background-color: #b4bebe7e;
+        border: 2px solid #f4f8f9;
       }
     }
   }
@@ -29,7 +37,9 @@ export const StHeader = styled.header`
 
 export const StMain = styled.main`
   min-height: 89vh;
-  background-color: #f2f2f2;
+  background-color: #f4f8f9;
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,7 +52,6 @@ export const StFooter = styled.footer`
   text-align: center;
   padding: 20px 0px;
   bottom: 0px;
-  background-color: #121a35;
+  background-color: #3a4040;;
   color: white;
-  border-top: 8px solid #fed100;
 `;

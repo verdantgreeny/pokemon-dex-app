@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { StDashboard, StImg } from "../styles/styledComponents";
 import PokemonCard from "./PokemonCard";
 
@@ -19,7 +18,7 @@ const Dashboard = ({ selectedPokemon, onDeleteHandler }) => {
                   isSelected={true}
                 />
               ) : (
-                <StImg src="/src/assets/pokeball-13iwdk7Y.png"></StImg>
+                <StImg src="/src/assets/pokeball.png"></StImg>
               )}
             </li>
           ))}
@@ -29,4 +28,3 @@ const Dashboard = ({ selectedPokemon, onDeleteHandler }) => {
 };
 
 export default Dashboard;
-

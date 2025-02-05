@@ -2,21 +2,34 @@ import styled from "styled-components";
 
 //Home.jsx
 export const HomeDiv = styled.div`
-  background-image: url("/src/assets/pokemon-home.png");
+  background-image: url("/src/assets/gradient-white-color-background.png");
   background-position: center;
   background-size: cover;
-  width: 99vw;
+  font-family: "Barriecito", serif;
+  font-size: 90px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
   height: 100vh;
+
+  img {
+    width: 20vw;
+    max-width: 150px;
+    margin: 20px 0 70px 0;
+  }
 
   button {
     font-family: "Barriecito", serif;
-    position: relative;
-    width: 99vw;
-    height: 10vh;
-    top: 83vh;
+
+    width: 100vw;
+    height: 13vh;
+
     border: none;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 40px;
     background-color: #ffffff8d;
 
     &:hover {
@@ -28,14 +41,14 @@ export const HomeDiv = styled.div`
 
 //Detail.jsx
 export const DetailSection = styled.section`
-  z-index: 99;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   border-radius: 12px;
-  background-color: white;
-  border: 4px solid #121a35;
-  padding: 20px;
+  background-color: #a8b8b8;
+  width: 520px;
+  height: 260px;
+  padding: 10px;
   font-family: "Black Han Sans", serif;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -45,8 +58,8 @@ export const DetailSection = styled.section`
   }
 
   img {
-    width: 224px;
-    height: 224px;
+    width: 200px;
+    height: 200px;
   }
 
   .pokemon-number {
@@ -54,17 +67,17 @@ export const DetailSection = styled.section`
   }
 
   .pokemon-name {
-    font-size: 27px;
+    font-size: 30px;
   }
 
   .pokemon-description {
     font-weight: 100;
-    width: 210px;
+    width: 240px;
     margin: 20px 0;
   }
 
   .pokemon-type {
-    margin-bottom: 40px;
+    margin-bottom: 45px;
   }
 
   .pokemon-btn-div {
@@ -75,18 +88,17 @@ export const DetailSection = styled.section`
 export const DetailLinkSection = styled.section`
   display: flex;
   gap: 20px;
-
   position: relative;
-  z-index: 0;
 
   a {
     font-family: "Black Han Sans", serif;
     font-size: 20px;
     font-weight: 100;
-    background-color: #121a35;
-    border: 5px solid #fed100;
+    background-color: #3a4040;
     border-radius: 30px;
-    padding: 3vh 3vw;
+    padding: 3vh 0vw;
+    width: 240px;
+    text-align: center;
     white-space: nowrap;
     text-decoration: none;
     color: white;
@@ -102,23 +114,49 @@ export const SelectedPokemonSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Black Han Sans", serif;
+  margin-top: 10px;
 
   .selected-pokemon {
-    background-color: #121a3544;
-    border: 4px solid #121a35;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     border-radius: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 15px;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     gap: 2px;
+
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      background: url("/src/assets/pokeball.png");
+      width: 100px;
+      height: 100px;
+      background-size: cover;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      z-index: -1;
+      opacity: 0.1;
+    }
+
+    &:hover {
+      img {
+        width: 65px;
+      }
+      .pokemon-name {
+        font-size: 14px;
+      }
+    }
   }
 
   img {
-    width: 50px;
+    width: 60px;
   }
 
   .pokemon-name {

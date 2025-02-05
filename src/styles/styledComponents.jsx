@@ -5,14 +5,13 @@ export const StPokemonList = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  background-color: #121a3573;
+  background-color: #b2c0c189;
   border-radius: 12px;
   width: 80vw;
   padding: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   font-family: "Black Han Sans", serif;
 `;
-
 
 //PokemonCard.jsx
 export const StPokemonCard = styled.div`
@@ -49,7 +48,7 @@ export const StPokemonCard = styled.div`
   }
 
   img {
-    margin: 5px auto;
+    margin: 5px auto 0 auto;
     padding: 0 40px;
     width: 80px;
     height: 80px;
@@ -62,16 +61,19 @@ export const StPokemonCard = styled.div`
 
 //Dashboard.jsx
 export const StDashboard = styled.section`
-  border: 10px solid #121a35;
+  border: 10px solid #3a4040;
   border-radius: 5px;
+  background-color: #e4edec6e;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   text-align: center;
   font-family: "Black Han Sans", serif;
-  padding: 20px 0px;
-  margin: 10px 0;
+  padding: 30px 10px;
+  margin: 30px 0;
 
   h2 {
     font-size: 25px;
+    padding-bottom: 20px;
+    color: #121a35;
   }
 
   ul {
@@ -82,28 +84,42 @@ export const StDashboard = styled.section`
 `;
 
 export const StImg = styled.img`
-  background-color: white;
   margin: 10px auto;
-  padding: 20px;
-  margin: 10px 0;
+  margin: 30px 0;
   width: 120px;
   height: 120px;
-  border-radius: 5px;
+  border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  opacity:0.8;
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.13), 0 10px 10px rgba(0, 0, 0, 0.11);
+    opacity: 0.4;
+  }
 `;
 
 //Button.jsx
 export const StButton = styled.button`
-  background-color: ${(prop) => (prop.color === "red" ? "#f89090" : prop.color === "yellow" ? "#F1EF7B" : "#B3E0F8")};
+  background-color: ${(prop) =>
+    prop.color === "red"
+      ? "#f89090"
+      : prop.color === "yellow"
+      ? "#F1EF7B"
+      : "#B3E0F8"};
   border: none;
   border-radius: 12px;
-  width: 60px;
+  width: 90px;
+  height: 25px;
   padding: 2px;
   margin: 0 auto;
   cursor: pointer;
 
   &:hover {
-    background-color: ${(p) => (p.color === "red" ? "#f8909086" : p.color === "yellow" ? "#dad868ae" : "#b3e0f87b")};
+    background-color: ${(p) =>
+      p.color === "red"
+        ? "#f8909086"
+        : p.color === "yellow"
+        ? "#dad868ae"
+        : "#b3e0f87b"};
   }
-
 `;

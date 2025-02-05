@@ -25,7 +25,7 @@ const PokemonCard = ({
           type="button"
           onClick={() => onAddHandler(pokemon)}
         >
-          {!pokemon.isSelected ? "추가" : "추가됨"}
+          {!pokemon.isSelected ? "추가" : "보유"}
         </Button>
       ) : (
         <Button
@@ -42,4 +42,3 @@ const PokemonCard = ({
 };
 
 export default PokemonCard;
-

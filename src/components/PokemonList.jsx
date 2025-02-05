@@ -19,4 +19,3 @@ const PokemonList = ({ onAddHandler, newMockList }) => {
 };
 
 export default PokemonList;
-
