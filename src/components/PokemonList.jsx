@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { StPokemonList } from "../styles/styledComponents";
 import PokemonCard from "./PokemonCard";
+import { PokemonContext} from "../contexts/PokemonContext";
 
-const PokemonList = ({ onAddHandler, newMockList }) => {
+const PokemonList = () => {
+  const {newMockList} = useContext(PokemonContext);
   return (
     <StPokemonList>
       {newMockList.map((pokemon) => (
         <li key={pokemon.id}>
           <PokemonCard
             pokemon={pokemon}
-            onAddHandler={onAddHandler}
             isSelected={false}
           />
         </li>

@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { StPokemonCard } from "../styles/styledComponents";
 import Button from "./Button";
+import { PokemonContext} from "../contexts/PokemonContext";
 
-const PokemonCard = ({
-  pokemon,
-  onAddHandler,
-  onDeleteHandler,
-  isSelected,
-}) => {
+const PokemonCard = ({pokemon,isSelected}) => {
+  const {onAddHandler,onDeleteHandler} = useContext(PokemonContext);
   return (
     <StPokemonCard>
       <div className="pokemon-name">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import Button from "../components/Button";
 import {
@@ -6,8 +6,10 @@ import {
   DetailSection,
   SelectedPokemonSection,
 } from "../styles/styledPages";
+import { PokemonContext} from "../contexts/PokemonContext";
 
-const Detail = ({ onAddHandler, newMockList }) => {
+const Detail = () => {
+  const {newMockList, onAddHandler} = useContext(PokemonContext);
   const navigate = useNavigate();
   const [query] = useSearchParams();
   const detailPokemonId = +query.get("id");

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { StDashboard, StImg } from "../styles/styledComponents";
 import PokemonCard from "./PokemonCard";
+import { PokemonContext} from "../contexts/PokemonContext";
 
-const Dashboard = ({ selectedPokemon, onDeleteHandler }) => {
+const Dashboard = () => {
+  const {selectedPokemon} = useContext(PokemonContext);
   return (
     <StDashboard>
       <h2> 나만의 포켓몬 </h2>
@@ -14,7 +16,6 @@ const Dashboard = ({ selectedPokemon, onDeleteHandler }) => {
               {selectedPokemon[i] ? (
                 <PokemonCard
                   pokemon={selectedPokemon[i]}
-                  onDeleteHandler={onDeleteHandler}
                   isSelected={true}
                 />
               ) : (
