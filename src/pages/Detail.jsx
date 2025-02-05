@@ -117,7 +117,7 @@ const PokemonBtnDiv = styled.div`
 
 const DetailLinkDiv = styled.div`
   display: flex;
-  gap: 40px;
+  gap: 20px;
 
   position: relative;
   z-index: 0;
@@ -129,7 +129,7 @@ const DetailLinkDiv = styled.div`
     background-color: #121a35;
     border: 10px solid #FED100;
     border-radius: 30px;
-    padding: 3vh 10vw;
+    padding: 3vh 3vw;
     white-space : nowrap;
     text-decoration: none;
     color: white;
