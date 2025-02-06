@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
+import { useSelector } from "react-redux";
 import { StDashboard, StImg } from "../styles/styledComponents";
 import PokemonCard from "./PokemonCard";
-import { PokemonContext} from "../contexts/PokemonContext";
 
 const Dashboard = () => {
-  const {selectedPokemon} = useContext(PokemonContext);
+  const selectedPokemon = useSelector((state) => state.pokemon);
+
   return (
     <StDashboard>
       <h2> 나만의 포켓몬 </h2>
@@ -14,10 +15,7 @@ const Dashboard = () => {
           .map((_, i) => (
             <li key={i}>
               {selectedPokemon[i] ? (
-                <PokemonCard
-                  pokemon={selectedPokemon[i]}
-                  isSelected={true}
-                />
+                <PokemonCard pokemon={selectedPokemon[i]} isSelected={true} />
               ) : (
                 <StImg src="/src/assets/pokeball.png"></StImg>
               )}

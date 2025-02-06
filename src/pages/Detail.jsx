@@ -1,19 +1,51 @@
-import React, { useContext } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import Button from "../components/Button";
+import MOCK_DATA from "../mock-data";
+import { addPokemon } from "../redux/slices/pokemonSlice";
 import {
   DetailLinkSection,
   DetailSection,
   SelectedPokemonSection,
 } from "../styles/styledPages";
-import { PokemonContext} from "../contexts/PokemonContext";
 
 const Detail = () => {
-  const {newMockList, onAddHandler} = useContext(PokemonContext);
+  const selectedPokemon = useSelector((state) => state.pokemon);
+  const dispatch = useDispatch();
+  // ✅ 포켓몬 리스트에서도 추가된 포켓몬일 경우 버튼을 바꾸기 위해 새로만든 mock-data 배열
+  const newMockList = MOCK_DATA.map((pokemon) => {
+    const selectedId = selectedPokemon.map((p) => p.id);
+    if (selectedId.includes(pokemon.id)) {
+      return {
+        ...pokemon,
+        isSelected: true,
+      };
+    } else {
+      return pokemon;
+    }
+  });
+
   const navigate = useNavigate();
   const [query] = useSearchParams();
   const detailPokemonId = +query.get("id");
   const pokemon = newMockList.find((p) => p.id === detailPokemonId);
+
+  // ✅ 포켓몬 추가 기능
+  const onAddHandler = (pokemon) => {
+    const addedPokemon = selectedPokemon.find((p) => {
+      return p.id === pokemon.id;
+    });
+
+    if (addedPokemon) {
+      toast("이미 보유한 포켓몬이므로 삭제됩니다.");
+      onDeleteHandler(pokemon.id);
+    } else if (selectedPokemon.length >= 6) {
+      toast("6개 이상의 포켓몬을 보유할 수 없습니다.");
+    } else {
+      dispatch(addPokemon({ ...pokemon }));
+    }
+  };
 
   // ✅ 이전번호 및 다음번호 포켓몬 디테일페이지 이동
   const prePokemon = newMockList.find((p) =>
