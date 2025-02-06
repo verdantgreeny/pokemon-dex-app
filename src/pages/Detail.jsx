@@ -18,10 +18,11 @@ const Detail = () => {
   const [query] = useSearchParams();
   const detailPokemonId = +query.get("id");
   const pokemon = MOCK_DATA.find((p) => p.id === detailPokemonId);
-  const isSeletedPokemon = selectedPokemon.some((p)=> p.id === detailPokemonId);
+  const isSeletedPokemon = selectedPokemon.some(
+    (p) => p.id === detailPokemonId
+  );
 
-
-  // ✅ 포켓몬 추가 기능
+  // ✅ 상세페이지 내부 버튼 기능
   const onAddHandler = (pokemon) => {
     const addedPokemon = selectedPokemon.find((p) => {
       return p.id === pokemon.id;
@@ -87,7 +88,7 @@ const Detail = () => {
               type="button"
               onClick={() => onAddHandler(pokemon)}
             >
-              {!isSeletedPokemon? "추가" : "보유"}
+              {!isSeletedPokemon ? "추가" : "보유"}
             </Button>
           </div>
         </div>
