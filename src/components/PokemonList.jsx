@@ -23,7 +23,7 @@ const PokemonList = () => {
     <StPokemonList>
       {newMockList.map((pokemon) => (
         <li key={pokemon.id}>
-          <PokemonCard pokemon={pokemon} isSelected={false} />
+          <PokemonCard pokemon={pokemon} isDashboard={false} />
         </li>
       ))}
     </StPokemonList>

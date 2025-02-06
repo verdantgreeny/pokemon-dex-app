@@ -15,7 +15,7 @@ const Dashboard = () => {
           .map((_, i) => (
             <li key={i}>
               {selectedPokemon[i] ? (
-                <PokemonCard pokemon={selectedPokemon[i]} isSelected={true} />
+                <PokemonCard pokemon={selectedPokemon[i]} isDashboard={true} />
               ) : (
                 <StImg src="/src/assets/pokeball.png"></StImg>
               )}
