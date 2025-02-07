@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { HomeDiv } from "../styles/styledPages";
-import pokeball from "/src/assets/pokeball.png";
+import pokeball from "/assets/pokeball.png";
 
 const Home = () => {
   const navigate = useNavigate();
