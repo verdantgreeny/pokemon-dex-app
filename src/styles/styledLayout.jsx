@@ -36,7 +36,7 @@ export const StHeader = styled.header`
 `;
 
 export const StMain = styled.main`
-  min-height: 89vh;
+  min-height: 112vh;
   background-color: #f4f8f9;
   background-position: center;
   background-size: cover;

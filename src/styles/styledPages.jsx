@@ -18,14 +18,14 @@ export const HomeDiv = styled.div`
   img {
     width: 20vw;
     max-width: 150px;
-    margin: 20px 0 70px 0;
+    margin: 20px 0 50px 0;
   }
 
   button {
     font-family: "Barriecito", serif;
 
     width: 100vw;
-    height: 13vh;
+    height: 87px;;
 
     border: none;
     cursor: pointer;
@@ -92,13 +92,15 @@ export const DetailLinkSection = styled.section`
 
   a {
     font-family: "Black Han Sans", serif;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 100;
     background-color: #3a4040;
     border-radius: 30px;
-    padding: 3vh 0vw;
+    padding: 17px 7px 12px 7px;
     width: 240px;
+    height: 28px;
     text-align: center;
+    
     white-space: nowrap;
     text-decoration: none;
     color: white;

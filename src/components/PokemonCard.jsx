@@ -40,7 +40,7 @@ const PokemonCard = ({ pokemon, isDashboard, isSletedPokemon }) => {
       </Link>
       {!isDashboard ? (
         <Button
-          color={isSletedPokemon && "yellow"}
+        $color={isSletedPokemon && "yellow"}
           type="button"
           onClick={() => onClickHandler(pokemon)}
         >
@@ -48,7 +48,7 @@ const PokemonCard = ({ pokemon, isDashboard, isSletedPokemon }) => {
         </Button>
       ) : (
         <Button
-          color="red"
+        $color="red"
           type="button"
           onClick={() => onClickHandler(pokemon)}
         >

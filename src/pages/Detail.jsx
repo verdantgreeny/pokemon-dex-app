@@ -84,7 +84,7 @@ const Detail = () => {
               돌아가기
             </Button>
             <Button
-              color={isSeletedPokemon && "yellow"}
+              $color={isSeletedPokemon && "yellow"}
               type="button"
               onClick={() => onAddHandler(pokemon)}
             >

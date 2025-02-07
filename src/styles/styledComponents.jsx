@@ -101,9 +101,9 @@ export const StImg = styled.img`
 //Button.jsx
 export const StButton = styled.button`
   background-color: ${(prop) =>
-    prop.color === "red"
+    prop.$color === "red"
       ? "#f89090"
-      : prop.color === "yellow"
+      : prop.$color === "yellow"
       ? "#F1EF7B"
       : "#B3E0F8"};
   border: none;
@@ -116,9 +116,9 @@ export const StButton = styled.button`
 
   &:hover {
     background-color: ${(p) =>
-      p.color === "red"
+      p.$color === "red"
         ? "#f8909086"
-        : p.color === "yellow"
+        : p.$color === "yellow"
         ? "#dad868ae"
         : "#b3e0f87b"};
   }
