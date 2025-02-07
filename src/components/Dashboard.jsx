@@ -2,6 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { StDashboard, StImg } from "../styles/styledComponents";
 import PokemonCard from "./PokemonCard";
+import pokeball from "/src/assets/pokeball.png";
+
 
 const Dashboard = () => {
   const selectedPokemon = useSelector((state) => state.pokemon);
@@ -17,7 +19,7 @@ const Dashboard = () => {
               {selectedPokemon[i] ? (
                 <PokemonCard pokemon={selectedPokemon[i]} isDashboard={true} />
               ) : (
-                <StImg src="src/assets/pokeball.png"></StImg>
+                <StImg src={pokeball}></StImg>
               )}
             </li>
           ))}

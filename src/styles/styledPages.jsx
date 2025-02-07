@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import pokemonBackground from "/src/assets/gradient-white-color-background.png";
+import pokeball from "/src/assets/pokeball.png";
 
 //Home.jsx
 export const HomeDiv = styled.div`
-  background-image: url("src/assets/gradient-white-color-background.png");
+  background-image: url(${pokemonBackground});
   background-position: center;
   background-size: cover;
   font-family: "Barriecito", serif;
@@ -135,7 +137,7 @@ export const SelectedPokemonSection = styled.section`
     z-index: 1;
 
     &::after {
-      background: url("src/assets/pokeball.png");
+      background: url(${pokeball});
       width: 100px;
       height: 100px;
       background-size: cover;
