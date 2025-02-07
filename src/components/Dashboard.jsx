@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { StDashboard, StImg } from "../styles/styledComponents";
 import PokemonCard from "./PokemonCard";
-import pokeball from "/src/assets/pokeball.png";
+import pokeball from "/assets/pokeball.png";
 
 
 const Dashboard = () => {

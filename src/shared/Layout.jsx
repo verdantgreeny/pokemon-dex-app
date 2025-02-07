@@ -8,7 +8,7 @@ const Layout = () => {
       <StHeader>
         <h1>
           {" "}
-          <img src="/src/assets/pokeball.png" alt="포켓볼" /> Pokémon Dex{" "}
+          <img src="/assets/pokeball.png" alt="포켓볼" /> Pokémon Dex{" "}
         </h1>
         <nav>
           <Link to="/">Home</Link>
