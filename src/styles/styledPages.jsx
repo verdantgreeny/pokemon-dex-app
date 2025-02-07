@@ -122,8 +122,7 @@ export const SelectedPokemonSection = styled.section`
   font-family: "Black Han Sans", serif;
   margin-top: 10px;
   display: grid; // 반응형 
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); // 반응형 
-  width: 60vw; // 반응형 
+  grid-template-columns: repeat(3, 1fr); // 반응형 
 
   .selected-pokemon {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
