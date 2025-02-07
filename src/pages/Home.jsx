@@ -12,7 +12,7 @@ const Home = () => {
           {" "}
           My Pokémon <br /> Dex{" "}
         </div>
-        <img src="/src/assets/pokeball.png" alt="포켓볼" />
+        <img src="src/assets/pokeball.png" alt="포켓볼" />
         <button onClick={() => navigate("/dex")}>Click To Start</button>
       </HomeDiv>
     </>
