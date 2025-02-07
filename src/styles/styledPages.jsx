@@ -48,7 +48,7 @@ export const DetailSection = styled.section`
   justify-content: space-around;
   border-radius: 12px;
   background-color: #a8b8b8;
-  max-width: 520px; // 반응형 
+  max-width: 520px; // 반응형
   height: 260px;
   padding: 10px;
   font-family: "Black Han Sans", serif;
@@ -99,8 +99,8 @@ export const DetailLinkSection = styled.section`
     background-color: #3a4040;
     border-radius: 30px;
     padding: 17px 7px 12px 7px;
-    max-width: 240px; // 반응형 
-    width: 40vw; // 반응형 
+    max-width: 240px; // 반응형
+    width: 40vw; // 반응형
     height: 28px;
 
     text-align: center;
@@ -121,8 +121,17 @@ export const SelectedPokemonSection = styled.section`
   align-items: center;
   font-family: "Black Han Sans", serif;
   margin-top: 10px;
-  display: grid; // 반응형 
-  grid-template-columns: repeat(3, 1fr); // 반응형 
+  display: grid; // 반응형
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
 
   .selected-pokemon {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);

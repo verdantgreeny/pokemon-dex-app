@@ -78,8 +78,8 @@ export const StDashboard = styled.section`
 
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     width: 80vw;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   }
 `;
 
@@ -90,7 +90,7 @@ export const StImg = styled.img`
   height: 120px;
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  opacity:0.8;
+  opacity: 0.8;
 
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.13), 0 10px 10px rgba(0, 0, 0, 0.11);
