@@ -57,6 +57,7 @@ const Detail = () => {
 
   return (
     <>
+     {/* 이전번호 및 다음번호 포켓몬 디테일페이지 이동 섹션 */}
       <DetailLinkSection>
         <Link to={prevDetail}>
           {" "}
@@ -70,6 +71,7 @@ const Detail = () => {
         </Link>
       </DetailLinkSection>
 
+      {/* 상세 페이지 메인*/}
       <DetailSection>
         <img src={pokemon.img_url} alt={pokemon.korean_name} />
         <div>
