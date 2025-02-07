@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const selectedList = JSON.parse(localStorage.getItem("selectedPokemon"));
+const selectedList = JSON.parse(localStorage.getItem("selectedPokemon"))
 const initialState = selectedList || [];
 
 const pokemonSlice = createSlice({

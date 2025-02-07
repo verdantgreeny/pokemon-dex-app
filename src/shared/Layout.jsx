@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import { StHeader, StMain, StFooter } from "../styles/styledLayout";
+import pokeball from "/assets/pokeball.png";
 
 const Layout = () => {
   return (
@@ -8,7 +9,7 @@ const Layout = () => {
       <StHeader>
         <h1>
           {" "}
-          <img src="/assets/pokeball.png" alt="포켓볼" /> Pokémon Dex{" "}
+          <img src={pokeball} alt="포켓볼" /> Pokémon Dex{" "}
         </h1>
         <nav>
           <Link to="/">Home</Link>
