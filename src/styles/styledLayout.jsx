@@ -36,7 +36,8 @@ export const StHeader = styled.header`
 `;
 
 export const StMain = styled.main`
-  min-height: 112vh;
+  padding: 2vh; // 반응형 
+  min-height: 90vh;
   background-color: #f4f8f9;
   background-position: center;
   background-size: cover;
@@ -52,6 +53,6 @@ export const StFooter = styled.footer`
   text-align: center;
   padding: 20px 0px;
   bottom: 0px;
-  background-color: #3a4040;;
+  background-color: #3a4040;
   color: white;
 `;

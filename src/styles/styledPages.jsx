@@ -20,14 +20,14 @@ export const HomeDiv = styled.div`
   img {
     width: 20vw;
     max-width: 150px;
-    margin: 20px 0 50px 0;
+    margin: 20px 0 6vh 0; //반응형
   }
 
   button {
     font-family: "Barriecito", serif;
 
     width: 100vw;
-    height: 87px;;
+    height: 87px;
 
     border: none;
     cursor: pointer;
@@ -48,7 +48,7 @@ export const DetailSection = styled.section`
   justify-content: space-around;
   border-radius: 12px;
   background-color: #a8b8b8;
-  width: 520px;
+  max-width: 520px; // 반응형 
   height: 260px;
   padding: 10px;
   font-family: "Black Han Sans", serif;
@@ -99,10 +99,11 @@ export const DetailLinkSection = styled.section`
     background-color: #3a4040;
     border-radius: 30px;
     padding: 17px 7px 12px 7px;
-    width: 240px;
+    max-width: 240px; // 반응형 
+    width: 40vw; // 반응형 
     height: 28px;
+
     text-align: center;
-    
     white-space: nowrap;
     text-decoration: none;
     color: white;
@@ -120,6 +121,9 @@ export const SelectedPokemonSection = styled.section`
   align-items: center;
   font-family: "Black Han Sans", serif;
   margin-top: 10px;
+  display: grid; // 반응형 
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); // 반응형 
+  width: 60vw; // 반응형 
 
   .selected-pokemon {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
