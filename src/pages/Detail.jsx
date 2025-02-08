@@ -23,16 +23,12 @@ const Detail = () => {
   );
 
   // ✅ 상세페이지 내부 버튼 기능
-  const onAddHandler = (pokemon) => {
-    const addedPokemon = selectedPokemon.find((p) => {
-      return p.id === pokemon.id;
-    });
-
-    if (addedPokemon) {
-      toast("이미 보유한 포켓몬이므로 삭제됩니다.");
+  const onToggleHandler = (pokemon) => {
+    if (isSeletedPokemon) {
+      toast.info("이미 보유한 포켓몬이므로 삭제됩니다.");
       dispatch(deletePokemon({ id: pokemon.id }));
     } else if (selectedPokemon.length >= 6) {
-      toast("6개 이상의 포켓몬을 보유할 수 없습니다.");
+      toast.info("6개 이상의 포켓몬을 보유할 수 없습니다.");
     } else {
       dispatch(addPokemon({ ...pokemon }));
     }
@@ -57,7 +53,7 @@ const Detail = () => {
 
   return (
     <>
-     {/* 이전번호 및 다음번호 포켓몬 디테일페이지 이동 섹션 */}
+      {/* 이전번호 및 다음번호 포켓몬 디테일페이지 이동 섹션 */}
       <DetailLinkSection>
         <Link to={prevDetail}>
           {" "}
@@ -88,7 +84,7 @@ const Detail = () => {
             <Button
               $color={isSeletedPokemon && "yellow"}
               type="button"
-              onClick={() => onAddHandler(pokemon)}
+              onClick={() => onToggleHandler(pokemon)}
             >
               {!isSeletedPokemon ? "추가" : "보유"}
             </Button>

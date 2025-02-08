@@ -29,6 +29,7 @@ export const StPokemonCard = styled.div`
 
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.13), 0 10px 10px rgba(0, 0, 0, 0.11);
+    cursor: pointer;
   }
 
   .pokemon-name {

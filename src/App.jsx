@@ -20,8 +20,7 @@ function App() {
         toastStyle={{
           fontFamily: "Black Han Sans, serif",
           fontSize: "18px",
-          textAlign: "center",
-          minWidth: "350px",
+          minWidth: "390px",
           padding: "30px",
         }}
       />
