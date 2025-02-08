@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import pokemonBackground from "/src/assets/gradient-white-color-background.png";
-import pokeball from "/assets/pokeball.png";
+import pokeball from "/src/assets/pokeball.png";
 
 //Home.jsx
 export const HomeDiv = styled.div`

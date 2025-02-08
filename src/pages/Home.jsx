@@ -1,9 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { withTheme } from "styled-components";
 import { HomeDiv } from "../styles/styledPages";
-import pokeball from "/assets/pokeball.png";
+import pokeball from "/src/assets/pokeball.png";
 
 const Home = () => {
   const navigate = useNavigate();

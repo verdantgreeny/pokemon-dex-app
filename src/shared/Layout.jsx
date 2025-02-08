@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import { StHeader, StMain, StFooter } from "../styles/styledLayout";
-import pokeball from "/assets/pokeball.png";
+import pokeball from "/src/assets/pokeball.png";
 
 const Layout = () => {
   return (
