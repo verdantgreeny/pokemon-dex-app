@@ -18,6 +18,7 @@ const Detail = () => {
   const [query] = useSearchParams();
   const detailPokemonId = +query.get("id");
   const pokemon = MOCK_DATA.find((p) => p.id === detailPokemonId);
+  // ✅ 포켓몬 Dashboard에 추가된 포켓몬인지 확인(상세페이지 내부에서 포켓몬 버튼을 추가버튼-true-을 할지 보유버튼-false-을 할지 결정)
   const isSeletedPokemon = selectedPokemon.some(
     (p) => p.id === detailPokemonId
   );
