@@ -105,5 +105,5 @@
 <br />
 
 
-#### 배포된 링크 (배포성공❤️) : [링크](https://pokemon-dex-app-rho.vercel.app/home)
-#### KPT 회고 : []()
+#### 배포된 링크 (배포성공❤️) : [배포링크](https://pokemon-dex-app-rho.vercel.app/home)
+#### KPT 회고 : [KPT회고링크](https://velog.io/@verdantgreeny/개인-프로젝트-Pokemon-Dex-최종-KPT-회고)
