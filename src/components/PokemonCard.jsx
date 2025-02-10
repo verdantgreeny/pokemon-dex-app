@@ -21,7 +21,7 @@ const PokemonCard = ({ pokemon, isDashboard, isSletedPokemon }) => {
         dispatch(deletePokemon({ id: pokemonInput.id }));
       } else {
         if (selectedPokemon.length >= 6) {
-          toast.info("6개 이상의 포켓몬을 보유할 수 없습니다.");
+          toast.info("최대 6마리까지 포켓몬을 보유할 수 있습니다.");
         } else {
           dispatch(addPokemon({ ...pokemonInput }));
         }
