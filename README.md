@@ -30,7 +30,7 @@
 
 ## ⚙ 프로젝트 화면 및 구조
 **1. 화면**<br />
-![](https://velog.velcdn.com/images/verdantgreeny/post/3a1811b6-4273-42ce-93b4-410b67fc40c2/image.gif)
+<img src="https://velog.velcdn.com/images/verdantgreeny/post/3a1811b6-4273-42ce-93b4-410b67fc40c2/image.gif" width="600px"/>
 
 **1-1. Home**
 |![](https://velog.velcdn.com/images/verdantgreeny/post/283e9f9e-92d9-4737-96e4-8162d8c36e1a/image.png)|![](https://velog.velcdn.com/images/verdantgreeny/post/984b9189-0c9b-4924-8411-edc4d6f58aef/image.png)|

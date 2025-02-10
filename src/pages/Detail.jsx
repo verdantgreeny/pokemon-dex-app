@@ -26,7 +26,7 @@ const Detail = () => {
   // ✅ 상세페이지 내부 버튼 기능
   const onToggleHandler = (pokemon) => {
     if (isSeletedPokemon) {
-      toast.info("이미 보유한 포켓몬이므로 삭제됩니다.");
+      toast.info("이미 보유한 포켓몬을 또 잡으시려구요???? 보유한 포멧몬 마저 도망갔습니다.");
       dispatch(deletePokemon({ id: pokemon.id }));
     } else if (selectedPokemon.length >= 6) {
       toast.info("6개 이상의 포켓몬을 보유할 수 없습니다.");

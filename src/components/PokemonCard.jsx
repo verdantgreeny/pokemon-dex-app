@@ -17,7 +17,7 @@ const PokemonCard = ({ pokemon, isDashboard, isSletedPokemon }) => {
       dispatch(deletePokemon({ id: pokemonInput.id }));
     } else {
       if (isSletedPokemon) {
-        toast.info("이미 보유한 포켓몬이므로 삭제됩니다.");
+        toast.info("이미 보유한 포켓몬을 또 잡으시려구요???? 보유한 포멧몬 마저 도망갔습니다.");
         dispatch(deletePokemon({ id: pokemonInput.id }));
       } else {
         if (selectedPokemon.length >= 6) {
