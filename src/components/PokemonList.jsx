@@ -11,7 +11,7 @@ const PokemonList = () => {
         <li key={pokemon.id}>
           <PokemonCard
             pokemon={pokemon}
-            isSelected={false}
+            isDashboard={false}
           />
         </li>
       ))}

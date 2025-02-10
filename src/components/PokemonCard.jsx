@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { StPokemonCard } from "../styles/styledComponents";
 import Button from "./Button";
-import { PokemonContext} from "../contexts/PokemonContext";
+import { PokemonContext } from "../contexts/PokemonContext";
 
-const PokemonCard = ({pokemon,isSelected}) => {
-  const {onAddHandler,onDeleteHandler} = useContext(PokemonContext);
+const PokemonCard = ({ pokemon, isDashboard }) => {
+  const { onAddHandler, onDeleteHandler } = useContext(PokemonContext);
   return (
     <StPokemonCard>
       <div className="pokemon-name">
@@ -16,7 +16,7 @@ const PokemonCard = ({pokemon,isSelected}) => {
       <Link to={`/detail?id=${pokemon.id}`}>
         <img src={pokemon.img_url} alt={pokemon.korean_name} />
       </Link>
-      {!isSelected ? (
+      {!isDashboard ? (
         <Button
           color={pokemon.isSelected && "yellow"}
           type="button"

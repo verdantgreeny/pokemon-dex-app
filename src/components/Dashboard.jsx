@@ -16,7 +16,7 @@ const Dashboard = () => {
               {selectedPokemon[i] ? (
                 <PokemonCard
                   pokemon={selectedPokemon[i]}
-                  isSelected={true}
+                  isDashboard={true}
                 />
               ) : (
                 <StImg src="/src/assets/pokeball.png"></StImg>
