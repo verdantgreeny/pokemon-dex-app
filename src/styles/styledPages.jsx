@@ -7,15 +7,15 @@ export const HomeDiv = styled.div`
   background-image: url(${pokemonBackground});
   background-position: center;
   background-size: cover;
-  font-family: "Barriecito", serif;
-  font-size: 90px;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
+  font-family: "Barriecito", serif;
+  font-size: 90px;
+  text-align: center;
 
   img {
     width: 20vw;
@@ -24,15 +24,13 @@ export const HomeDiv = styled.div`
   }
 
   button {
-    font-family: "Barriecito", serif;
-
+    background-color: #ffffff8d;
     width: 100vw;
     height: 87px;
-
+    font-family: "Barriecito", serif;
+    font-size: 40px;
     border: none;
     cursor: pointer;
-    font-size: 40px;
-    background-color: #ffffff8d;
 
     &:hover {
       background-color: #0000003e;
@@ -43,17 +41,17 @@ export const HomeDiv = styled.div`
 
 //Detail.jsx
 export const DetailSection = styled.section`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 12px;
   background-color: #a8b8b8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   max-width: 520px; // 반응형
   height: 260px;
   padding: 10px;
-  font-family: "Black Han Sans", serif;
+  border-radius: 12px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-family: "Black Han Sans", serif;
 
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.13), 0 10px 10px rgba(0, 0, 0, 0.11);
@@ -93,21 +91,20 @@ export const DetailLinkSection = styled.section`
   position: relative;
 
   a {
-    font-family: "Black Han Sans", serif;
-    font-size: 22px;
-    font-weight: 100;
     background-color: #3a4040;
-    border-radius: 30px;
+    margin-bottom: 20px;
     padding: 17px 7px 12px 7px;
     max-width: 240px; // 반응형
     width: 40vw; // 반응형
     height: 28px;
-
+    border-radius: 30px;
+    font-family: "Black Han Sans", serif;
+    font-size: 22px;
+    font-weight: 100;
     text-align: center;
     white-space: nowrap;
     text-decoration: none;
     color: white;
-    margin-bottom: 20px;
 
     &:hover {
       opacity: 0.7;
@@ -119,12 +116,12 @@ export const SelectedPokemonSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Black Han Sans", serif;
   margin-top: 10px;
   display: grid; // 반응형
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 20px;
+  font-family: "Black Han Sans", serif;
 
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);

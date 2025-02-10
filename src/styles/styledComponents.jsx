@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 //PokemonList.jsx
 export const StPokemonList = styled.ul`
+  background-color: #b2c0c189;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  background-color: #b2c0c189;
-  border-radius: 12px;
   width: 80vw;
-  padding: 20px;
   margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   font-family: "Black Han Sans", serif;
 `;
 
@@ -34,17 +34,17 @@ export const StPokemonCard = styled.div`
 
   .pokemon-name {
     background-color: #ffffff;
-    border-radius: 5px 5px 0 0;
     padding: 8px 10px;
+    border-radius: 5px 5px 0 0;
     text-align: left;
     font-size: 15px;
 
     span {
       background-color: #adecb9;
       margin-right: 10px;
+      padding: 4px 6px;
       border-radius: 8px;
       font-size: 12px;
-      padding: 4px 6px;
     }
   }
 
@@ -62,19 +62,19 @@ export const StPokemonCard = styled.div`
 
 //Dashboard.jsx
 export const StDashboard = styled.section`
+  background-color: #e4edec6e;
+  margin: 30px 0;
+  padding: 30px 10px;
   border: 10px solid #3a4040;
   border-radius: 5px;
-  background-color: #e4edec6e;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   text-align: center;
   font-family: "Black Han Sans", serif;
-  padding: 30px 10px;
-  margin: 30px 0;
 
   h2 {
-    font-size: 25px;
     padding-bottom: 20px;
     color: #121a35;
+    font-size: 25px;
   }
 
   ul {
@@ -85,7 +85,6 @@ export const StDashboard = styled.section`
 `;
 
 export const StImg = styled.img`
-  margin: 10px auto;
   margin: 30px 0;
   width: 120px;
   height: 120px;

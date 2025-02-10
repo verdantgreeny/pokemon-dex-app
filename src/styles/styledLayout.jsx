@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const StHeader = styled.header`
-  font-family: "Barriecito", serif;
+  background-color: #3a4040;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 20px 60px 20px 30px;
-  background-color: #3a4040;
+  font-family: "Barriecito", serif;
   color: #f4f8f9;
   h1 {
     font-size: 5vw;
@@ -20,12 +20,12 @@ export const StHeader = styled.header`
     a {
       padding: 5px 10px;
       margin: 0 5px;
-      color: #f4f8f9;
-      text-decoration: none;
-      font-size: 25px;
       border: 2px solid #3a4040;
       border-radius: 5px;
+      text-decoration: none;
       text-shadow: none;
+      color: #f4f8f9;
+      font-size: 25px;
 
       &:hover {
         background-color: #b4bebe7e;
@@ -36,8 +36,6 @@ export const StHeader = styled.header`
 `;
 
 export const StMain = styled.main`
-  padding: 2vh; // 반응형 
-  min-height: 90vh;
   background-color: #f4f8f9;
   background-position: center;
   background-size: cover;
@@ -45,14 +43,16 @@ export const StMain = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2vh; // 반응형 
+  min-height: 90vh;
 `;
 
 export const StFooter = styled.footer`
-  font-family: "Barriecito", serif;
+  background-color: #3a4040;
   position: relative;
-  text-align: center;
   padding: 20px 0px;
   bottom: 0px;
-  background-color: #3a4040;
+  font-family: "Barriecito", serif;
   color: white;
+  text-align: center;
 `;
