@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { StPokemonCard } from "../styles/styledComponents";
 import Button from "./Button";
 
@@ -7,19 +7,25 @@ const PokemonCard = ({
   pokemon,
   onAddHandler,
   onDeleteHandler,
-  isSelected,
+  isDashboard,
 }) => {
+  const navigate = useNavigate();
   return (
-    <StPokemonCard>
+    <StPokemonCard
+      onClick={(e) => {
+        if (e.target.tagName === "BUTTON") {
+          return;
+        }
+        navigate(`/detail?id=${pokemon.id}`);
+      }}
+    >
       <div className="pokemon-name">
         {" "}
         <span> {String(pokemon.id).padStart(3, "0")} </span>
         {pokemon.korean_name}
       </div>
-      <Link to={`/detail?id=${pokemon.id}`}>
-        <img src={pokemon.img_url} alt={pokemon.korean_name} />
-      </Link>
-      {!isSelected ? (
+      <img src={pokemon.img_url} alt={pokemon.korean_name} />
+      {!isDashboard ? (
         <Button
           color={pokemon.isSelected && "yellow"}
           type="button"

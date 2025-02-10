@@ -15,7 +15,7 @@ const Dashboard = ({ selectedPokemon, onDeleteHandler }) => {
                 <PokemonCard
                   pokemon={selectedPokemon[i]}
                   onDeleteHandler={onDeleteHandler}
-                  isSelected={true}
+                  isDashboard={true}
                 />
               ) : (
                 <StImg src="/src/assets/pokeball.png"></StImg>

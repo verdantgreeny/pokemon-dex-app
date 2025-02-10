@@ -10,7 +10,7 @@ const PokemonList = ({ onAddHandler, newMockList }) => {
           <PokemonCard
             pokemon={pokemon}
             onAddHandler={onAddHandler}
-            isSelected={false}
+            isDashboard={false}
           />
         </li>
       ))}
